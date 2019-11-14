@@ -1,0 +1,33 @@
+{
+    "name": "RiscoBarragem",
+    "fields": [
+        {
+            "fieldName": "descricaoRisco",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "grauDoRisco",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "eventoRisco",
+            "otherEntityRelationshipName": "riscoBarragem",
+            "relationshipName": "eventoRisco",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191113201707",
+    "entityTableName": "risco_barragem",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "monitBarragens",
+    "applications": "*",
+    "microserviceName": "monitBarragens"
+}

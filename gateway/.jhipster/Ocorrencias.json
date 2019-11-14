@@ -1,0 +1,34 @@
+{
+    "name": "Ocorrencias",
+    "fields": [
+        {
+            "fieldName": "descricao",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "tipoAlerta",
+            "otherEntityRelationshipName": "ocorrencias",
+            "relationshipName": "tipoAlerta"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "nivelSituacao",
+            "otherEntityRelationshipName": "ocorrencias",
+            "relationshipName": "nivelSituacao",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191114001320",
+    "entityTableName": "ocorrencias",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

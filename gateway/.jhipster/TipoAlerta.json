@@ -1,0 +1,34 @@
+{
+    "name": "TipoAlerta",
+    "fields": [
+        {
+            "fieldName": "descricao",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "alertaOrgao",
+            "otherEntityRelationshipName": "tipoAlerta",
+            "relationshipName": "alertaOrgao"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "ocorrencias",
+            "otherEntityRelationshipName": "tipoAlerta",
+            "relationshipName": "ocorrencias",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191114001321",
+    "entityTableName": "tipo_alerta",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

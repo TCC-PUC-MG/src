@@ -1,0 +1,34 @@
+{
+    "name": "MinaExtracao",
+    "fields": [
+        {
+            "fieldName": "tamanho",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "barragem",
+            "otherEntityRelationshipName": "minaExtracao",
+            "relationshipName": "barragem"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "localidade",
+            "otherEntityRelationshipName": "minaExtracao",
+            "relationshipName": "localidade",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191113201500",
+    "entityTableName": "mina_extracao",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

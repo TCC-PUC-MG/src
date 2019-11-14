@@ -1,0 +1,50 @@
+
+entity MinaExtracao{
+    tamanho String,    
+}
+entity Barragem{
+}
+entity Sensor{
+	numero Integer
+}
+entity SensorLeitura{
+    leitura String
+}
+entity EventoBarragem{
+}
+entity EventoRisco{
+    eventosBarragem String
+}
+entity RiscoBarragem{
+	descricaoRisco String,
+    grauDoRisco Integer
+}
+entity Localidade{
+	nome String,
+    latitute BigDecimal,
+    longitude BigDecimal
+}
+
+entity MinaExtracao{
+    tamanho String    
+}
+entity Barragem{
+}
+entity Sensor{
+	numero Integer
+}
+entity SensorLeitura{
+    leitura String
+}
+entity EventoBarragem{
+}
+
+relationship OneToMany {
+    MinaExtracao{barragem} to Barragem{minaExtracao},
+    Barragem{sensor} to Sensor{barragem},
+    Barragem{sensorLeitura} to SensorLeitura{barragem},
+    SensorLeitura{eventoBarragem} to EventoBarragem{sensorLeitura},
+    EventoBarragem{eventoRisco} to EventoRisco{eventoBarragem},
+    EventoRisco{riscoBarragem} to RiscoBarragem{eventoRisco},
+    Localidade{minaExtracao} to MinaExtracao{localidade}
+}

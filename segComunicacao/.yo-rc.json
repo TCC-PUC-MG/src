@@ -1,0 +1,40 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "br.com.sca.segcomunicacao"
+    },
+    "jhipsterVersion": "6.5.0",
+    "applicationType": "microservice",
+    "baseName": "segComunicacao",
+    "packageName": "br.com.sca.segcomunicacao",
+    "packageFolder": "br/com/sca/segcomunicacao",
+    "serverPort": "8081",
+    "authenticationType": "oauth2",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": false,
+    "websocket": false,
+    "databaseType": "mongodb",
+    "devDatabaseType": "mongodb",
+    "prodDatabaseType": "mongodb",
+    "searchEngine": "elasticsearch",
+    "messageBroker": false,
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "NTI0NTU0MDFlNTkzY2NmNWE2ZmU4ZDVjMzczMjMyM2UwM2RhNjkwYWJkODJmNjQ3MmM0NzI0ZDkwN2ViYzMwOWFiODZiYzRhZmE0OTM0YzRmOTc5MWExNjRkNDA5OWE3MDgzZWRiZTg1NWFlY2E4NmExNzI2N2Q3ZDQ4YmUyNjk=",
+    "embeddableLaunchScript": false,
+    "testFrameworks": [
+      "gatling",
+      "cucumber"
+    ],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false,
+    "clientPackageManager": "npm",
+    "blueprints": [],
+    "skipClient": true,
+    "skipUserManagement": true
+  }
+}

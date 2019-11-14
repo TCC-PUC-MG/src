@@ -1,0 +1,41 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="alertaOrgao">
+            <h2><span>Alerta Orgao</span> {{alertaOrgao.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Alerta Enviados</span></dt>
+                <dd>
+                    <div *ngIf="alertaOrgao.alertaEnviados">
+                        <a [routerLink]="['/alerta-enviados', alertaOrgao.alertaEnviados?.id, 'view']">{{alertaOrgao.alertaEnviados?.id}}</a>
+                    </div>
+                </dd>
+                <dt><span>Tipo Alerta</span></dt>
+                <dd>
+                    <div *ngIf="alertaOrgao.tipoAlerta">
+                        <a [routerLink]="['/tipo-alerta', alertaOrgao.tipoAlerta?.id, 'view']">{{alertaOrgao.tipoAlerta?.id}}</a>
+                    </div>
+                </dd>
+                <dt><span>Orgao Governa</span></dt>
+                <dd>
+                    <div *ngIf="alertaOrgao.orgaoGoverna">
+                        <a [routerLink]="['/orgao-governo', alertaOrgao.orgaoGoverna?.id, 'view']">{{alertaOrgao.orgaoGoverna?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/alerta-orgao', alertaOrgao.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

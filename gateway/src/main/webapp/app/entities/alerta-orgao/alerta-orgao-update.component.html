@@ -1,0 +1,45 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-alerta-orgao-heading">Create or edit a Alerta Orgao</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!editForm.get('id').value">
+                    <label for="id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_alertaEnviados">Alerta Enviados</label>
+                    <select class="form-control" id="field_alertaEnviados" name="alertaEnviados" formControlName="alertaEnviados">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="alertaEnviadosOption.id === editForm.get('alertaEnviados').value?.id ? editForm.get('alertaEnviados').value : alertaEnviadosOption" *ngFor="let alertaEnviadosOption of alertaenviados; trackBy: trackAlertaEnviadosById">{{alertaEnviadosOption.id}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_tipoAlerta">Tipo Alerta</label>
+                    <select class="form-control" id="field_tipoAlerta" name="tipoAlerta" formControlName="tipoAlerta">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="tipoAlertaOption.id === editForm.get('tipoAlerta').value?.id ? editForm.get('tipoAlerta').value : tipoAlertaOption" *ngFor="let tipoAlertaOption of tipoalertas; trackBy: trackTipoAlertaById">{{tipoAlertaOption.id}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_orgaoGoverna">Orgao Governa</label>
+                    <select class="form-control" id="field_orgaoGoverna" name="orgaoGoverna" formControlName="orgaoGoverna">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="orgaoGovernoOption.id === editForm.get('orgaoGoverna').value?.id ? editForm.get('orgaoGoverna').value : orgaoGovernoOption" *ngFor="let orgaoGovernoOption of orgaogovernos; trackBy: trackOrgaoGovernoById">{{orgaoGovernoOption.id}}</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span>Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span>Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

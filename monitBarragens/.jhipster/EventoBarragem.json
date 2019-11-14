@@ -1,0 +1,30 @@
+{
+    "name": "EventoBarragem",
+    "fields": [],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "eventoRisco",
+            "otherEntityRelationshipName": "eventoBarragem",
+            "relationshipName": "eventoRisco"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "sensorLeitura",
+            "otherEntityRelationshipName": "eventoBarragem",
+            "relationshipName": "sensorLeitura",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191113201705",
+    "entityTableName": "evento_barragem",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "monitBarragens",
+    "applications": "*",
+    "microserviceName": "monitBarragens"
+}

@@ -1,0 +1,33 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="minaExtracao">
+            <h2><span>Mina Extracao</span> {{minaExtracao.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Tamanho</span></dt>
+                <dd>
+                    <span>{{minaExtracao.tamanho}}</span>
+                </dd>
+                <dt><span>Localidade</span></dt>
+                <dd>
+                    <div *ngIf="minaExtracao.localidade">
+                        <a [routerLink]="['/localidade', minaExtracao.localidade?.id, 'view']">{{minaExtracao.localidade?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/mina-extracao', minaExtracao.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+{
+    "name": "Localidade",
+    "fields": [
+        {
+            "fieldName": "nome",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "latitute",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "longitude",
+            "fieldType": "BigDecimal"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "minaExtracao",
+            "otherEntityRelationshipName": "localidade",
+            "relationshipName": "minaExtracao"
+        }
+    ],
+    "changelogDate": "20191113201507",
+    "entityTableName": "localidade",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

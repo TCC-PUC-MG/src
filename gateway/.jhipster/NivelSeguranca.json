@@ -1,0 +1,31 @@
+{
+    "name": "NivelSeguranca",
+    "fields": [
+        {
+            "fieldName": "nivel",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "descricao",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "nivelSituacao",
+            "otherEntityRelationshipName": "nivelSeguranca",
+            "relationshipName": "nivelSituacao"
+        }
+    ],
+    "changelogDate": "20191114001318",
+    "entityTableName": "nivel_seguranca",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

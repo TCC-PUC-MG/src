@@ -1,0 +1,33 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="eventoRisco">
+            <h2><span>Evento Risco</span> {{eventoRisco.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Eventos Barragem</span></dt>
+                <dd>
+                    <span>{{eventoRisco.eventosBarragem}}</span>
+                </dd>
+                <dt><span>Evento Barragem</span></dt>
+                <dd>
+                    <div *ngIf="eventoRisco.eventoBarragem">
+                        <a [routerLink]="['/evento-barragem', eventoRisco.eventoBarragem?.id, 'view']">{{eventoRisco.eventoBarragem?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/evento-risco', eventoRisco.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

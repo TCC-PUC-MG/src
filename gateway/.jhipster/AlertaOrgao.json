@@ -1,0 +1,38 @@
+{
+    "name": "AlertaOrgao",
+    "fields": [],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "alertaEnviados",
+            "otherEntityRelationshipName": "alertaOrgaos",
+            "relationshipName": "alertaEnviados",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "tipoAlerta",
+            "otherEntityRelationshipName": "alertaOrgao",
+            "relationshipName": "tipoAlerta",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "orgaoGoverno",
+            "otherEntityRelationshipName": "alertaOrgao",
+            "relationshipName": "orgaoGoverna",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191114001322",
+    "entityTableName": "alerta_orgao",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

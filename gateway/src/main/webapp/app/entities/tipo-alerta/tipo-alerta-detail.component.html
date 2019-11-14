@@ -1,0 +1,33 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="tipoAlerta">
+            <h2><span>Tipo Alerta</span> {{tipoAlerta.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Descricao</span></dt>
+                <dd>
+                    <span>{{tipoAlerta.descricao}}</span>
+                </dd>
+                <dt><span>Ocorrencias</span></dt>
+                <dd>
+                    <div *ngIf="tipoAlerta.ocorrencias">
+                        <a [routerLink]="['/ocorrencias', tipoAlerta.ocorrencias?.id, 'view']">{{tipoAlerta.ocorrencias?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/tipo-alerta', tipoAlerta.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

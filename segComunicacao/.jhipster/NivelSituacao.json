@@ -1,0 +1,35 @@
+{
+    "name": "NivelSituacao",
+    "fields": [
+        {
+            "fieldName": "descricao",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "ocorrencias",
+            "otherEntityRelationshipName": "nivelSituacao",
+            "relationshipName": "ocorrencias"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "nivelSeguranca",
+            "otherEntityRelationshipName": "nivelSituacao",
+            "relationshipName": "nivelSeguranca",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191114001238",
+    "entityTableName": "nivel_situacao",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "segComunicacao",
+    "applications": "*",
+    "microserviceName": "segComunicacao"
+}

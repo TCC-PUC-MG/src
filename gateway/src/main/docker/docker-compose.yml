@@ -1,0 +1,21 @@
+version: '2'
+services:
+  mongodb:
+    extends:
+      file: mongodb.yml
+      service: gateway-mongodb
+  gateway-elasticsearch:
+    extends:
+      file: elasticsearch.yml
+      service: gateway-elasticsearch
+  jhipster-registry:
+    extends:
+      file: jhipster-registry.yml
+      service: jhipster-registry
+    environment:
+      - SPRING_CLOUD_CONFIG_SERVER_COMPOSITE_0_TYPE=native
+      - SPRING_CLOUD_CONFIG_SERVER_COMPOSITE_0_SEARCH_LOCATIONS=file:./central-config/docker-config/
+  keycloak:
+    extends:
+      file: keycloak.yml
+      service: keycloak

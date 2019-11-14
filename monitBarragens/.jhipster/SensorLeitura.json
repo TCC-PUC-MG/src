@@ -1,0 +1,35 @@
+{
+    "name": "SensorLeitura",
+    "fields": [
+        {
+            "fieldName": "leitura",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "eventoBarragem",
+            "otherEntityRelationshipName": "sensorLeitura",
+            "relationshipName": "eventoBarragem"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "barragem",
+            "otherEntityRelationshipName": "sensorLeitura",
+            "relationshipName": "barragem",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191113201704",
+    "entityTableName": "sensor_leitura",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "monitBarragens",
+    "applications": "*",
+    "microserviceName": "monitBarragens"
+}

@@ -1,0 +1,89 @@
+<div>
+    <h2 id="page-heading">
+        <span>Alerta Orgaos</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-alerta-orgao" [routerLink]="['/alerta-orgao/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span class="hidden-sm-down" >
+            Create a new Alerta Orgao
+            </span>
+        </button>
+    </h2>
+    <jhi-alert-error></jhi-alert-error>
+    <jhi-alert></jhi-alert>
+    <div class="row">
+        <div class="col-sm-12">
+            <form name="searchForm" class="form-inline">
+                <div class="input-group w-100 mt-3">
+                    <input type="text" class="form-control" [(ngModel)]="currentSearch" id="currentSearch" name="currentSearch" placeholder="Query">
+                    <button class="input-group-append btn btn-info" (click)="search(currentSearch)">
+                        <fa-icon [icon]="'search'"></fa-icon>
+                    </button>
+                    <button class="input-group-append btn btn-danger" (click)="clear()" *ngIf="currentSearch">
+                        <fa-icon [icon]="'trash-alt'"></fa-icon>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <br/>
+    <div class="alert alert-warning" *ngIf="alertaOrgaos?.length === 0">
+        <span>No alertaOrgaos found</span>
+    </div>
+    <div class="table-responsive" *ngIf="alertaOrgaos?.length > 0">
+        <table class="table table-striped" aria-describedby="page-heading">
+            <thead>
+            <tr>
+            <th scope="col" ><span>ID</span></th>
+            <th scope="col" ><span>Alerta Enviados</span></th>
+            <th scope="col" ><span>Tipo Alerta</span></th>
+            <th scope="col" ><span>Orgao Governa</span></th>
+            <th scope="col"></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let alertaOrgao of alertaOrgaos ;trackBy: trackId">
+                <td><a [routerLink]="['/alerta-orgao', alertaOrgao.id, 'view' ]">{{alertaOrgao.id}}</a></td>
+                <td>
+                    <div *ngIf="alertaOrgao.alertaEnviados">
+                        <a [routerLink]="['/alerta-enviados', alertaOrgao.alertaEnviados?.id, 'view' ]" >{{alertaOrgao.alertaEnviados?.id}}</a>
+                    </div>
+                </td>
+                <td>
+                    <div *ngIf="alertaOrgao.tipoAlerta">
+                        <a [routerLink]="['/tipo-alerta', alertaOrgao.tipoAlerta?.id, 'view' ]" >{{alertaOrgao.tipoAlerta?.id}}</a>
+                    </div>
+                </td>
+                <td>
+                    <div *ngIf="alertaOrgao.orgaoGoverna">
+                        <a [routerLink]="['/orgao-governo', alertaOrgao.orgaoGoverna?.id, 'view' ]" >{{alertaOrgao.orgaoGoverna?.id}}</a>
+                    </div>
+                </td>
+                <td class="text-right">
+                    <div class="btn-group">
+                        <button type="submit"
+                                [routerLink]="['/alerta-orgao', alertaOrgao.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/alerta-orgao', alertaOrgao.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/alerta-orgao', { outlets: { popup: alertaOrgao.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

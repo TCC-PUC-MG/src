@@ -1,0 +1,23 @@
+{
+    "name": "AlertaEnviados",
+    "fields": [],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "alertaOrgao",
+            "otherEntityRelationshipName": "alertaEnviados",
+            "relationshipName": "alertaOrgaos",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20191114001324",
+    "entityTableName": "alerta_enviados",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

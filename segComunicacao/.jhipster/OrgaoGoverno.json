@@ -1,0 +1,36 @@
+{
+    "name": "OrgaoGoverno",
+    "fields": [
+        {
+            "fieldName": "descricao",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "pessoaContato",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "telefone",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "alertaOrgao",
+            "otherEntityRelationshipName": "orgaoGoverna",
+            "relationshipName": "alertaOrgao"
+        }
+    ],
+    "changelogDate": "20191114001242",
+    "entityTableName": "orgao_governo",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "segComunicacao",
+    "applications": "*",
+    "microserviceName": "segComunicacao"
+}

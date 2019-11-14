@@ -1,0 +1,34 @@
+{
+    "name": "EventoRisco",
+    "fields": [
+        {
+            "fieldName": "eventosBarragem",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "riscoBarragem",
+            "otherEntityRelationshipName": "eventoRisco",
+            "relationshipName": "riscoBarragem"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "eventoBarragem",
+            "otherEntityRelationshipName": "eventoRisco",
+            "relationshipName": "eventoBarragem",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191113201505",
+    "entityTableName": "evento_risco",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

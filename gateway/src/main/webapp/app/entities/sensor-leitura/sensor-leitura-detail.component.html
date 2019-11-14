@@ -1,0 +1,33 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="sensorLeitura">
+            <h2><span>Sensor Leitura</span> {{sensorLeitura.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Leitura</span></dt>
+                <dd>
+                    <span>{{sensorLeitura.leitura}}</span>
+                </dd>
+                <dt><span>Barragem</span></dt>
+                <dd>
+                    <div *ngIf="sensorLeitura.barragem">
+                        <a [routerLink]="['/barragem', sensorLeitura.barragem?.id, 'view']">{{sensorLeitura.barragem?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/sensor-leitura', sensorLeitura.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

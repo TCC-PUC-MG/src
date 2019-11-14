@@ -1,0 +1,40 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "br.com.sca.monitbarragem"
+    },
+    "jhipsterVersion": "6.5.0",
+    "applicationType": "microservice",
+    "baseName": "monitBarragens",
+    "packageName": "br.com.sca.monitbarragem",
+    "packageFolder": "br/com/sca/monitbarragem",
+    "serverPort": "8081",
+    "authenticationType": "oauth2",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": false,
+    "websocket": false,
+    "databaseType": "mongodb",
+    "devDatabaseType": "mongodb",
+    "prodDatabaseType": "mongodb",
+    "searchEngine": "elasticsearch",
+    "messageBroker": false,
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "MzA0YmYxZWJlYWJmZWRkZGZlMjg3ZWY2ZDk4ZTM1NzJiZWVlMjc1MjhjNGYyNWFmYjQxNWJiMDIxNzZiYjdlYzJlMGNlM2Q2ODE5OWU1NDhmNjhhOGVhMjkwOGMzMjg3Y2JiNmYyY2Q3MDI2ZWNhMmUxZTZmY2UxYmMwMDdhYzg=",
+    "embeddableLaunchScript": false,
+    "testFrameworks": [
+      "gatling",
+      "cucumber"
+    ],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false,
+    "clientPackageManager": "npm",
+    "blueprints": [],
+    "skipClient": true,
+    "skipUserManagement": true
+  }
+}

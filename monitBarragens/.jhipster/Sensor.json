@@ -1,0 +1,29 @@
+{
+    "name": "Sensor",
+    "fields": [
+        {
+            "fieldName": "numero",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "barragem",
+            "otherEntityRelationshipName": "sensor",
+            "relationshipName": "barragem",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191113201703",
+    "entityTableName": "sensor",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "monitBarragens",
+    "applications": "*",
+    "microserviceName": "monitBarragens"
+}

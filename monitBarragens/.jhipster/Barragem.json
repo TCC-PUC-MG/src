@@ -1,0 +1,36 @@
+{
+    "name": "Barragem",
+    "fields": [],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "sensor",
+            "otherEntityRelationshipName": "barragem",
+            "relationshipName": "sensor"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "sensorLeitura",
+            "otherEntityRelationshipName": "barragem",
+            "relationshipName": "sensorLeitura"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "minaExtracao",
+            "otherEntityRelationshipName": "barragem",
+            "relationshipName": "minaExtracao",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191113201702",
+    "entityTableName": "barragem",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "monitBarragens",
+    "applications": "*",
+    "microserviceName": "monitBarragens"
+}

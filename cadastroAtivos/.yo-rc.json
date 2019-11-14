@@ -1,0 +1,40 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "br.com.sca.cadastroativos"
+    },
+    "jhipsterVersion": "6.5.0",
+    "applicationType": "microservice",
+    "baseName": "cadastroAtivos",
+    "packageName": "br.com.sca.cadastroativos",
+    "packageFolder": "br/com/sca/cadastroativos",
+    "serverPort": "8081",
+    "authenticationType": "oauth2",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": false,
+    "websocket": false,
+    "databaseType": "mongodb",
+    "devDatabaseType": "mongodb",
+    "prodDatabaseType": "mongodb",
+    "searchEngine": "elasticsearch",
+    "messageBroker": false,
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "MDk4YTFiNDUyN2Y0Mzg1NWY3NTg3ZTNhNmJkODdlNjFlZmZjMzY0NTM1ODdkZGQ0NTRiMTY5Zjg1YjJmOWI4MDU5NzVkYzYxZmMyYTJiZTNmMTFjYjgzYzg4OTljYjE2MDRiNjA1ZWIxN2M1YThhMjY1ZGExM2U4NjdkODc0Y2Y=",
+    "embeddableLaunchScript": false,
+    "testFrameworks": [
+      "gatling",
+      "cucumber"
+    ],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false,
+    "clientPackageManager": "npm",
+    "blueprints": [],
+    "skipClient": true,
+    "skipUserManagement": true
+  }
+}
